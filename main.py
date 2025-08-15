@@ -29,9 +29,7 @@ WIFI_PASS = "02470515791265058806"
 SSID = "FRITZ!Box24"
 PASSWORD = "02470515791265058806"
 
-# firmware_url = "https://raw.githubusercontent.com/marioklein/Feriencountdown_OTA/"
-# ota_updater = OTAUpdater(SSID, PASSWORD, firmware_url, "main.py")
-# ota_updater.download_and_install_update_if_available()
+
 
 
 # openSenseMap (IDs aus deinem oSeM-Account)
@@ -260,7 +258,9 @@ except Exception as e:
     if lcd:
         lcd.move_to(0,1); lcd.putstr(_fit("Upload ERROR", 16))
 
-
+firmware_url = "https://raw.githubusercontent.com/marioklein/Wetterstation/"
+ota_updater = OTAUpdater(SSID, PASSWORD, firmware_url, "main.py")
+ota_updater.download_and_install_update_if_available()
 
 # kurze Anzeigezeit, dann Schlaf
 sleep_ms(3000)
