@@ -8,8 +8,11 @@ from time import sleep_ms
 import sys
 import network
 import ujson as json
-from wifi import SSID, PASSWORD, WIFI_SSID, WIFI_PASS
 from ota import OTAUpdater
+
+from wifi import SSID, PASSWORD, WIFI_SSID, WIFI_PASS
+from osem import OSEM_BOX_ID, OSEM_SENSOR_TEMP, OSEM_SENSOR_PRES, OSEM_SENSOR_HUM
+
 
 # ====== KONFIG ======
 SDA_PIN = 21
@@ -21,6 +24,8 @@ LCD_ADDRESS_OVERRIDE = None   # z.B. 0x27, sonst Auto-Scan
 SETTLE_MS = 150
 SAMPLES = 3
 # ====================
+
+
 
 
 
@@ -259,4 +264,5 @@ ota_updater.download_and_install_update_if_available()
 sleep_ms(3000)
 print(f"\n💤 DeepSleep für {SLEEP_MS//1000} Sekunden …")
 deepsleep(SLEEP_MS)
+
 
