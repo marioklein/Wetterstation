@@ -8,6 +8,7 @@ from time import sleep_ms
 import sys
 import network
 import ujson as json
+from ota import OTAUpdater
 
 # ====== KONFIG ======
 SDA_PIN = 21
