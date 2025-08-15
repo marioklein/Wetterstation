@@ -8,6 +8,7 @@ from time import sleep_ms
 import sys
 import network
 import ujson as json
+from wifi import SSID, PASSWORD, WIFI_SSID, WIFI_PASS
 from ota import OTAUpdater
 
 # ====== KONFIG ======
@@ -20,14 +21,6 @@ LCD_ADDRESS_OVERRIDE = None   # z.B. 0x27, sonst Auto-Scan
 SETTLE_MS = 150
 SAMPLES = 3
 # ====================
-
-# WLAN
-WIFI_SSID = "FRITZ!Box24"
-WIFI_PASS = "02470515791265058806"
-
-# WLAN-Zugangsdaten
-SSID = "FRITZ!Box24"
-PASSWORD = "02470515791265058806"
 
 
 
